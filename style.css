@@ -1,0 +1,83 @@
+body {
+  height: 1000px;
+  width: 100%;
+  display: flex;
+
+  scroll-behavior: smooth;
+}
+
+.container:after {
+  content: "";
+  font-size: 100px;
+  border-right: 5px solid red;
+  font-weight: 700;
+  animation: textAnimate 2s step-end infinite;
+}
+
+@keyframes textAnimate {
+  0% {
+    content: "L";
+  }
+  10% {
+    content: "Lo";
+  }
+  10% {
+    content: "Lo";
+  }
+  20% {
+    content: "Loa";
+  }
+  30% {
+    content: "Load";
+  }
+  40% {
+    content: "Loadi";
+  }
+  50% {
+    content: "Loadin";
+  }
+  60% {
+    content: "Loading";
+  }
+  70% {
+    content: "Loading.";
+  }
+  80% {
+    content: "Loading..";
+  }
+  90% {
+    content: "Loading...";
+  }
+  100% {
+    content: "Loading....";
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.containerScroll {
+  margin-top: 200px;
+  width: 400px;
+  height: 400px;
+  margin-top: 100px;
+  background-color: aqua;
+  position: relative;
+  animation: goLeft 2s forwards;
+  animation-timeline: scroll();
+}
+
+@keyframes goLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
